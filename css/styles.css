@@ -1,0 +1,200 @@
+/* 
+    Author: Tarun Gupta
+    Student Number: C0932284 
+*/
+
+/* background color for the website */
+body {
+    background-color: #8eb5d7;
+}
+
+/* container element */
+.container {
+    width: 80%; 
+    margin: 0 auto;
+    background-color: #c88882;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* header element */
+header {
+    background-color: #ff6f61;
+    margin: 20px 0;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+/* nav element */
+nav {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background-color: #d6e1ea;
+    border-radius: 10px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+}
+
+nav a:hover {
+    border-bottom-color: #333;
+}
+
+/* main element */
+main {
+    display: block;
+    background-color: #c88882;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* logo */
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* hover effect to the logo */
+img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* default fonts for the website */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* font sizes for all headings */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 24px;
+}
+
+h1 {
+    color: #b4190b;
+}
+
+/* list items */
+ul {
+    list-style: none;
+    padding: 0;
+    background-color: #428bca;
+    border-radius: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+/* footer */
+footer {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    background-color: #d6e1ea;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#product-of-the-week,
+#weekly-sales {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Style the product images */
+#product-of-the-week img,
+#weekly-sales img {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    height: auto;
+}
+
+/* Style the customer guarantee section */
+#customer-guarantee {
+    background-color: #e0e0eb;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Style the customer guarantee image */
+#customer-guarantee img {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 10%;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+/* Style the reasons to buy section */
+#reasons-to-buy {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Style the reasons to buy images */
+#reasons-to-buy .reason img {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: auto;
+}
+
+/* Style the footer element */
+footer {
+    background-color: #ff6f61;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
+}
+
+/* Style the footer links */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style the footer copyright text */
+footer p {
+    margin: 0;
+}
