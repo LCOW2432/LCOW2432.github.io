@@ -1,0 +1,72 @@
+/* 
+    Author: Tarun Gupta
+    Student Number: C0932284 
+*/
+
+/* training.css */
+
+@import url('styles.css');
+
+/* Styles for the Product Training Schedule table */
+
+.training-schedule {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.training-schedule caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.training-schedule th,
+.training-schedule td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.training-schedule th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.training-schedule tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.training-schedule tbody tr:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.training-schedule td.product {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.training-schedule td.date {
+    font-style: italic;
+}
+
+.training-schedule td.price {
+    color: #28a745;
+}
+
+.training-schedule td.length {
+    font-weight: bold;
+    color: #dc3545;
+}
+
+.training-schedule td.room {
+    font-style: italic;
+}
+
+.training-schedule td.instructor {
+    font-weight: bold;
+    color: #6610f2;
+}

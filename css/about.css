@@ -1,0 +1,76 @@
+/* 
+    Author: Tarun Gupta
+    Student Number: C0932284 
+*/
+
+/* styles.css */
+
+@import url('styles.css');
+
+/* about.css */
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    header img {
+        height: 80px;
+        width: 80px;
+    }
+    nav {
+        display: block;
+    }
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    main {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    header img {
+        height: 80px;
+        width: 80px;
+    }
+    nav {
+        display: block;
+    }
+    nav a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 901px) {
+    header img {
+        height: 100px;
+        width: 100px;
+    }
+    nav {
+        display: block;
+    }
+    nav a {
+        display: inline-block;
+        margin: 0 20px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
