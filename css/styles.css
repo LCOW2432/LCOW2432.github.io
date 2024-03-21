@@ -90,6 +90,10 @@ h1,h2 {
     color: #ff8a65; /* Orange heading */
 }
 
+h3 {
+    color: #6f6be4; /* Orange heading */
+}
+
 /* list items */
 ul {
     list-style: none;
