@@ -1,0 +1,92 @@
+/* styles.css */
+
+@import url('styles.css');
+
+/* Styles for the Contact form */
+.contact-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact-form fieldset {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+}
+
+.contact-form legend {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.contact-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.contact-form button[type="reset"] {
+    background-color: #dc3545;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-form ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-form li {
+    margin-bottom: 15px;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px #007bff;
+}
+
+.contact-form input[type="checkbox"]:focus {
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
