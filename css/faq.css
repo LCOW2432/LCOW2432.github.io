@@ -1,0 +1,40 @@
+@import url('styles.css');
+
+/* Styles for the FAQ page */
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff7e5f;
+    margin-bottom: 30px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+}
+
+.question {
+    color: #007bff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.answer {
+    font-size: 16px;
+    line-height: 1.6;
+}
