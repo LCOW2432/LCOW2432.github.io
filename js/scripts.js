@@ -2,8 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const productList = document.getElementById('product-list');
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
+    const cartTax = document.getElementById('cart-tax');
+    const cartTotalWithTax = document.getElementById('cart-total-with-tax');
     const checkoutBtn = document.getElementById('checkout-btn');
 
+    const TAX_RATE = 0.10; // 10% tax rate
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Function to load products from the JSON file
@@ -41,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to update the cart display
     function updateCart() {
-        if (cartItems && cartTotal) {
+        if (cartItems && cartTotal && cartTax && cartTotalWithTax) {
             cartItems.innerHTML = '';
             let total = 0;
 
@@ -57,7 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 total += item.price;
             });
 
-            cartTotal.innerHTML = `<h3>Total: $${total.toFixed(2)}</h3>`;
+            const tax = total * TAX_RATE;
+            const totalWithTax = total + tax;
+
+            cartTotal.innerHTML = `<h3>Subtotal: $${total.toFixed(2)}</h3>`;
+            cartTax.innerHTML = `<h3>Tax (10%): $${tax.toFixed(2)}</h3>`;
+            cartTotalWithTax.innerHTML = `<h3>Total: $${totalWithTax.toFixed(2)}</h3>`;
         }
     }
 
@@ -72,7 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', () => {
             if (cart.length > 0) {
-                alert(`Thank you for your purchase! Your total is $${calculateTotal().toFixed(2)}.`);
+                const totalWithTax = calculateTotalWithTax();
+                alert(`Thank you for your purchase! Your total is $${totalWithTax.toFixed(2)}.`);
                 cart = [];
                 localStorage.removeItem('cart');
                 updateCart();
@@ -82,9 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Helper function to calculate the total price of the cart
-    function calculateTotal() {
-        return cart.reduce((total, item) => total + item.price, 0);
+    // Helper function to calculate the total price of the cart including tax
+    function calculateTotalWithTax() {
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        const tax = total * TAX_RATE;
+        return total + tax;
     }
 
     loadProducts();
