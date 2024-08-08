@@ -1,0 +1,8 @@
+[
+    {"id": 1, "name": "Premium Iced Tea Maker", "price": 49.99, "image": "images/premium_iced_tea_maker.jpg"},
+    {"id": 2, "name": "Compact Iced Tea Maker", "price": 39.99, "image": "images/compact_iced_tea_maker.jpg"},
+    {"id": 3, "name": "Deluxe Iced Tea Maker", "price": 59.99, "image": "images/deluxe_iced_tea_maker.jpg"},
+    {"id": 4, "name": "Quick Brew Iced Tea Maker", "price": 29.99, "image": "images/quick_brew_iced_tea_maker.jpg"},
+    {"id": 5, "name": "Travel Iced Tea Maker", "price": 19.99, "image": "images/travel_iced_tea_maker.jpg"},
+    {"id": 6, "name": "Ultimate Iced Tea Maker", "price": 89.99, "image": "images/ultimate_iced_tea_maker.jpg"}
+]

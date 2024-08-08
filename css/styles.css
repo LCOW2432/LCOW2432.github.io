@@ -105,7 +105,9 @@ ul {
 li {
     margin-bottom: 5px;
     padding: 10px;
-    border-bottom: 1px solid #ffffff; /* White border */
+    background-color: #fff; /* White background for list items */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* footer */
@@ -135,6 +137,110 @@ nav a:hover, li:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hove
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
 }
+
+/* Styles for the product items */
+.product-item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product-item img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    }
+    
+    .product-item h3 {
+    margin: 10px 0;
+    }
+    
+    .product-item p {
+    font-size: 18px;
+    color: #333;
+    }
+    
+    .product-item button {
+    background-color: #72c3dc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    .product-item button
+    {
+    background-color: #ff8a65;
+    }
+    
+    /* Styles for the cart items */
+    .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    }
+    
+    .cart-item h3 {
+    font-size: 20px;
+    margin: 0;
+    }
+    
+    .cart-item p {
+    font-size: 18px;
+    color: #333;
+    }
+    
+    .cart-item button {
+    background-color: #ff8a65;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    .cart-item button
+    {
+    background-color: #72c3dc;
+    }
+    
+    /* Styles for the checkout button */
+    #checkout-btn {
+    background-color: #ff8a65;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    }
+    
+    #checkout-btn
+    {
+    background-color: #72c3dc;
+    }
+    
+    /* Styles for the cart total */
+    #cart-total h3 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    }
+
 
 /* Mobile */
 @media screen and (max-width: 600px) {
