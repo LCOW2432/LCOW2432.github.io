@@ -8,21 +8,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to load products from the JSON file
     function loadProducts() {
-        fetch('data/products.json')
-            .then(response => response.json())
-            .then(products => {
-                products.forEach(product => {
-                    const productItem = document.createElement('div');
-                    productItem.classList.add('product-item');
-                    productItem.innerHTML = `
-                        <img src="${product.image}" alt="${product.name}">
-                        <h3>${product.name}</h3>
-                        <p>$${product.price.toFixed(2)}</p>
-                        <button onclick="addToCart(${product.id})">Add to Cart</button>
-                    `;
-                    productList.appendChild(productItem);
+        if (productList) {
+            fetch('data/products.json')
+                .then(response => response.json())
+                .then(products => {
+                    products.forEach(product => {
+                        const productItem = document.createElement('div');
+                        productItem.classList.add('product-item');
+                        productItem.innerHTML = `
+                            <img src="${product.image}" alt="${product.name}">
+                            <h3>${product.name}</h3>
+                            <p>$${product.price.toFixed(2)}</p>
+                            <button onclick="addToCart(${product.id})">Add to Cart</button>
+                        `;
+                        productList.appendChild(productItem);
+                    });
                 });
-            });
+        }
     }
 
     // Function to add a product to the cart
@@ -39,22 +41,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to update the cart display
     function updateCart() {
-        cartItems.innerHTML = '';
-        let total = 0;
+        if (cartItems && cartTotal) {
+            cartItems.innerHTML = '';
+            let total = 0;
 
-        cart.forEach(item => {
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-item');
-            cartItem.innerHTML = `
-                <h3>${item.name}</h3>
-                <p>$${item.price.toFixed(2)}</p>
-                <button onclick="removeFromCart(${cart.indexOf(item)})">Remove</button>
-            `;
-            cartItems.appendChild(cartItem);
-            total += item.price;
-        });
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <h3>${item.name}</h3>
+                    <p>$${item.price.toFixed(2)}</p>
+                    <button onclick="removeFromCart(${cart.indexOf(item)})">Remove</button>
+                `;
+                cartItems.appendChild(cartItem);
+                total += item.price;
+            });
 
-        cartTotal.innerHTML = `<h3>Total: $${total.toFixed(2)}</h3>`;
+            cartTotal.innerHTML = `<h3>Total: $${total.toFixed(2)}</h3>`;
+        }
     }
 
     // Function to remove a product from the cart
@@ -65,20 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to handle the checkout process
-    checkoutBtn.addEventListener('click', () => {
-        if (cart.length > 0) {
-            alert(`Thank you for your purchase! Your total is $${calculateTotal().toFixed(2)}.`);
-            cart = [];
-            localStorage.removeItem('cart');
-            updateCart();
-        } else {
-            alert("Your cart is empty!");
-        }
-    });
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length > 0) {
+                alert(`Thank you for your purchase! Your total is $${calculateTotal().toFixed(2)}.`);
+                cart = [];
+                localStorage.removeItem('cart');
+                updateCart();
+            } else {
+                alert('Your cart is empty.');
+            }
+        });
+    }
 
-    // Function to calculate the total cost
+    // Helper function to calculate the total price of the cart
     function calculateTotal() {
-        return cart.reduce((sum, item) => sum + item.price, 0);
+        return cart.reduce((total, item) => total + item.price, 0);
     }
 
     loadProducts();
