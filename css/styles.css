@@ -307,3 +307,77 @@ nav a:hover, li:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hove
         font-size: 20px;
     }
 }
+/* styles.css */
+
+/* Other styles remain the same */
+
+#product-list, #cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the product items */
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    flex: 1 1 calc(25% - 40px); /* Ensure squares fit within the grid */
+    max-width: calc(25% - 40px); /* Max width to ensure squares */
+    box-sizing: border-box; /* Include padding and border in width and height */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: space-between; /* Evenly space the content */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text */
+    position: relative;
+    min-height: 300px; /* Ensure square shape */
+    max-height: 300px; /* Ensure square shape */
+}
+
+.product-item img {
+    max-width: 100%;
+    max-height: 150px; /* Control the image height */
+    object-fit: cover; /* Maintain aspect ratio, cover the container */
+    border-radius: 10px;
+}
+
+.product-item h3 {
+    margin: 10px 0; /* Space between image and text */
+}
+
+.product-item p {
+    font-size: 18px;
+    margin: 10px 0; /* Space between price and button */
+}
+
+.product-item button {
+    margin-top: auto; /* Push the button to the bottom */
+    width: 80%;
+    padding: 10px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-item button:hover {
+    background-color: #004d99;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+    .product-item {
+        flex: 1 1 calc(50% - 40px); /* Adjust for tablets */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-item {
+        flex: 1 1 calc(100% - 40px); /* Adjust for mobile devices */
+        max-width: calc(100% - 40px);
+    }
+}
